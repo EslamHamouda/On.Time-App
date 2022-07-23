@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/linear"
+    tools:context=".SchedulePage">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:background="@drawable/linear_appbar"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/schedule_page_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@drawable/linear_appbar"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarStyle"
+            app:title="On.Time"
+            app:titleTextColor="@color/white"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="298dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tab_style"
+            android:elevation="0dp"
+            app:tabIndicator="@drawable/tab_style_indicator"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="#272430"
+            app:tabIndicatorHeight="35dp"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            app:tabTextColor="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginVertical="170dp"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:visibility="invisible"
+        android:focusable="true"
+        app:backgroundTint="#7E64FF"
+        app:srcCompat="@drawable/note_add"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/add_new_note" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginVertical="95dp"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:backgroundTint="#7E64FF"
+        app:srcCompat="@drawable/event_note"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/add_new_schedule" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:focusable="true"
+        app:backgroundTint="#7E64FF"
+        app:srcCompat="@drawable/plus_button"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/note_options" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

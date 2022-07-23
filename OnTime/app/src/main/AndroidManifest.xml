@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ontime">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.OnTime"
+        tools:targetApi="31">
+        <activity
+            android:name=".UpdateEventScreen"
+            android:exported="false"
+            android:parentActivityName=".SchedulePage"/>
+        <activity
+            android:name=".NewScheduleScreen"
+            android:exported="false"
+            android:parentActivityName=".SchedulePage" />
+        <activity
+            android:name=".NewNoteScreen"
+            android:exported="false"
+            android:parentActivityName=".SchedulePage"
+            android:theme="@style/NewNote" />
+        <activity
+            android:name=".UpdateNoteScreen"
+            android:exported="false"
+            android:parentActivityName=".SchedulePage"
+            android:theme="@style/NewNote" />
+        <activity
+            android:name=".NotificationHistory"
+            android:exported="false" />
+        <activity
+            android:name=".SchedulePage"
+            android:exported="false"
+            android:label="@string/title_activity_schedule_page"
+            android:theme="@style/Theme.OnTime.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
